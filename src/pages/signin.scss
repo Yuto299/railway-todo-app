@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import 'variables';
+
+.signin {
+  width: 500px;
+  margin: 0 auto;
+
+  .signin-form {
+    margin: 25px 0;
+
+    .email-label,
+    .password-label {
+      color: $text-color;
+    }
+
+    .email-input,
+    .password-input {
+      width: 100%;
+      font-size: large;
+      height: $input-height;
+      margin-bottom: 25px;
+    }
+
+    .signin-button {
+      background-color: $main-color;
+      color: $active-text-color;
+      width: $button-width;
+      height: $button-height;
+      border-radius: $border-radius;
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+  }
+
+  // タブレット向け（768px以上）
+  @media (min-width: 768px) {
+    .signin {
+      width: 80%;
+    }
+
+    .signin-form {
+      .signin-button {
+        width: 70px;
+        height: 35px;
+      }
+    }
+  }
+
+  // スマートフォン向け（320px以下）
+  @media (max-width: 320px) {
+    width: 100%;
+    margin: 0 10px;
+
+    .signin-form {
+      .email-input,
+      .password-input {
+        font-size: medium;
+        width: 50%;
+      }
+
+      .signin-button {
+        width: 70px;
+        height: 30px;
+      }
+    }
+
+    .error-message {
+      font-size: 12px;
+    }
+  }
+}

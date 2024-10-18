@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import 'variables';
+
+.signup {
+  width: 500px;
+  margin: 0 auto;
+
+  .signup-form {
+    margin: 25px 0;
+    color: $text-color;
+
+    .email-input-up,
+    .name-input-up,
+    .password-input-up {
+      width: 100%;
+      font-size: large;
+      height: $input-height;
+      margin-bottom: 25px;
+    }
+
+    .signup-button {
+      background-color: $main-color;
+      color: $active-text-color;
+      width: $button-width;
+      height: $button-height;
+      border-radius: $border-radius;
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+  }
+
+  // タブレット向け（768px以上）
+  @media (min-width: 768px) {
+    .signup {
+      width: 80%;
+    }
+
+    .signup-form {
+      .signup-button {
+        width: 70px;
+        height: 35px;
+      }
+    }
+  }
+
+  // スマートフォン向け（320px以下）
+  @media (max-width: 320px) {
+    .signup {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .signup-form {
+      .email-input-up,
+      .name-input-up,
+      .password-input-up {
+        font-size: medium;
+      }
+
+      .signup-button {
+        width: 60px;
+        height: 30px;
+      }
+    }
+
+    .error-message {
+      font-size: 12px;
+    }
+  }
+}

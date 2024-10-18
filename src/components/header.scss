@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+$header-color: #ffffff;
+
+.header {
+  width: 100%;
+  background-color: #242f9b;
+  color: $header-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  .sign-out-button {
+    margin-right: 50px;
+    color: #ffffff;
+  }
+
+  // 768px以上の画面サイズ用スタイル
+  @media (min-width: 768px) {
+    height: 100px;
+
+    h1 {
+      margin: 0 50px;
+    }
+
+    .sign-out-button {
+      margin-right: 70px;
+    }
+  }
+
+  // 320px以下の画面サイズ用スタイル
+  @media (max-width: 320px) {
+    height: 60px;
+
+    h1 {
+      margin: 0 13px;
+      font-size: 25px;
+    }
+
+    .sign-out-button {
+      margin: 0 15px;
+      font-size: 10px;
+    }
+  }
+}

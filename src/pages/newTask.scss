@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import 'variables';
+
+.new-task {
+  width: $list-width;
+  margin: 0 auto;
+
+  .new-task-form {
+    color: $text-color;
+  }
+
+  .new-task-select-list,
+  .new-task-title,
+  .new-task-detail {
+    width: $form-width;
+    margin-bottom: 25px;
+  }
+
+  .new-task-detail {
+    height: $detail-height;
+  }
+
+  .new-task-button {
+    background-color: $main-color;
+    color: $active-text-color;
+    width: $button-width;
+    height: $button-height;
+    border-radius: $border-radius;
+  }
+
+  .error-message {
+    color: $error-color;
+  }
+}
+
+// タブレット向け（768px以上）
+@media (min-width: 768px) {
+  .new-task {
+    width: 70%;
+  }
+
+  .new-task-select-list,
+  .new-task-title,
+  .new-task-detail {
+    width: 80%;
+  }
+
+  .new-task-button {
+    width: 70px;
+    height: 35px;
+  }
+}
+
+// スマートフォン向け（320px以下）
+@media (max-width: 320px) {
+  .new-task {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .new-task-select-list,
+  .new-task-title,
+  .new-task-detail {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .new-task-detail {
+    height: auto;
+  }
+
+  .new-task-button {
+    width: 60px;
+    height: 30px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+}

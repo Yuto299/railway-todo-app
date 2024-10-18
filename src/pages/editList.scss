@@ -1,0 +1,79 @@
+@charset "utf-8";
+@import 'variables';
+
+.edit-list {
+  width: $list-width;
+  margin: 0 auto;
+
+  .edit-list-form {
+    color: $text-color;
+  }
+
+  .edit-list-title {
+    width: $form-width;
+    margin-bottom: 25px;
+  }
+
+  .delete-list-button,
+  .edit-list-button {
+    width: $button-width;
+    height: $button-height;
+    border-radius: $border-radius;
+    margin: 25px 5px;
+  }
+
+  .delete-list-button {
+    color: $delete-color;
+    border: solid 1px $delete-color;
+    background-color: transparent;
+  }
+
+  .edit-list-button {
+    background-color: $main-color;
+    color: $active-text-color;
+  }
+
+  .error-message {
+    color: $error-color;
+  }
+
+  // タブレット向け（768px）
+  @media (max-width: 768px) {
+    width: 87%;
+
+    .edit-list {
+      width: 50%;
+    }
+    .edit-list-title {
+      width: 80%;
+    }
+
+    .delete-list-button,
+    .edit-list-button {
+      width: 70px;
+      height: 35px;
+    }
+  }
+
+  // スマートフォン向け（320px）
+  @media (max-width: 320px) {
+    width: 100%;
+    margin: 0 10px;
+
+    .edit-list-title {
+      width: 90%;
+      font-size: 14px;
+    }
+
+    .delete-list-button,
+    .edit-list-button {
+      width: 60px;
+      height: 30px;
+      margin: 15px 5px;
+    }
+
+    .error-message {
+      font-size: 12px;
+    }
+  }
+}

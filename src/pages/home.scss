@@ -1,0 +1,155 @@
+@charset "utf-8";
+@import 'variables';
+
+.taskList {
+  margin: 50px auto;
+  list-style: none;
+  width: $list-width;
+
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list-menu {
+    text-align: right;
+  }
+
+  .list-tab {
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+
+    .list-tab-item {
+      flex-shrink: 0;
+      width: 100px;
+      padding: 0 25px;
+      margin-right: 5px;
+      border: solid 1px $main-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.active {
+        background-color: $active-bg-color;
+        color: $active-text-color;
+      }
+    }
+  }
+
+  .tasks {
+    margin-top: 25px;
+
+    .tasks-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .task-item {
+      list-style-type: none;
+      height: $task-height;
+      width: calc(100% - 25px);
+      background-color: $task-bg-color;
+      padding-left: 25px;
+      font-size: large;
+      border: solid 1px #ffffff;
+
+      .task-item-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: $text-color;
+      }
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+  }
+
+  .display-select-wrapper {
+    width: 100px;
+    margin: 0 0 25px auto;
+
+    .display-select {
+      width: 100%;
+    }
+  }
+
+  .task-make,
+  .list-make,
+  .list-tap-edit {
+    text-align: center;
+    margin-top: 20px;
+    a {
+      text-decoration: none;
+      color: $main-color;
+      font-size: large;
+    }
+  }
+
+  // タブレット向け（768px以上）
+  @media (min-width: 768px) {
+    width: 92%;
+
+    .task-make,
+    .list-make,
+    .list-tap-edit {
+      font-size: 15px;
+      margin-right: 15px;
+    }
+    .list-tab .list-tab-item {
+      width: 80px;
+      padding: 0 20px;
+    }
+
+    .tasks .task-item {
+      font-size: medium;
+      width: 100%;
+      height: 100%;
+    }
+
+    .display-select-wrapper {
+      width: 80px;
+      .display-select {
+        width: 80%;
+      }
+    }
+  }
+
+  // スマートフォン向け（320px以下）
+  @media (max-width: 320px) {
+    width: 92%;
+    .list-tab .list-tab-item {
+      width: 60px;
+      padding: 0 5px;
+      font-size: 10px;
+    }
+    .tasks .task-item {
+      padding-left: 10px;
+      font-size: medium;
+      height: auto;
+      width: 100%;
+      height: 100px;
+    }
+
+    .task-make,
+    .list-make,
+    .list-tap-edit {
+      font-size: 12px;
+      margin-right: 12px;
+    }
+
+    .display-select-wrapper {
+      width: 80px;
+      .display-select {
+        width: 90%;
+      }
+    }
+
+    .error-message {
+      font-size: 10px;
+    }
+  }
+}
